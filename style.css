@@ -1,0 +1,164 @@
+body
+{
+	margin:0 !important;
+	background-image: url("background.jpg");
+}
+#Header
+{
+	widht: 100%;
+	border-bottom: 1px solid black;
+	background-color: #ddddff;
+}
+#logo
+{
+	widht: 60%;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-bottom: 40px;
+}
+#Header img
+{
+	width: 100%;
+}
+.content
+{
+	min-height: 100%;
+	width:70%;
+	margin-left: 15%;
+	margin-right: 15%;
+	padding: 30px;
+	background-color: #ccc;
+	font-size: 26px;
+	box-shadow: 0px 0px 24px 0px rgba(66, 68, 90, 1);
+	font-family: 'Staatliches', cursive;
+}
+.content>H2
+{
+	text-align: center;
+}
+.box:nth-child(1){background-image: url("fish.png"); }
+.box:nth-child(2){background-image: url("block.png");}
+.box:nth-child(3){background-image: url("but.png");}
+
+.box:nth-child(1):after{content: "Połów karpia"; bottom: -15px;}
+.box:nth-child(2):after{content: "Produkcja żelbetonu"; bottom: -15px;}
+.box:nth-child(3):after{content: "Kalosze"; bottom: -15px;}
+.box:after
+{
+	position: relative;
+	left: 80px;
+	font-weight: bold;
+	display:inline-block;
+	margin: auto;
+}
+.box
+{
+	padding: 10px;
+	margin: 10px;
+	height: 64px;
+	width: 320px;
+	background-color: #ffb700;
+	background-repeat: no-repeat;
+	background-size: contain;
+	border-radius:15px;
+	transition-property: width, height;
+	transition-duration: 0.5s, 0.3s;
+}
+.box:hover:after
+{
+	content: "";
+}
+.box:not(:hover) *	/*:not(.opis)*/ 
+{
+	position: absolute;
+	visibility: hiden;
+	height: 0px;
+	width: 0px;
+	font-size: 0;
+}
+.box:hover
+{
+	height: 300px;
+	width: 95%;
+	-webkit-box-shadow: -8px 8px 24px 0px rgba(66, 68, 90, 1);
+	-moz-box-shadow: -8px 8px 24px 0px rgba(66, 68, 90, 1);
+	box-shadow: -8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+.opis
+{
+	max-widht: 80px;
+}
+.box>.opis
+{
+	opacity:0%;
+	padding-left:325px;
+	height: 0px;
+	width: 0px;
+}
+.box:hover>.opis
+{
+	height: 100%;
+	width: 100%;
+	opacity: 100%;
+	transition-delay: 0.4s;
+}
+iframe
+{
+	margin-left:25%;
+	margin-right:25%;
+}
+
+.profilowe
+{
+	display: inline-block;
+	width: 24%;
+	text-align: center;
+}
+.profilowe>img
+{
+	border: 1px solid black;
+	width: 100%;
+}
+.profilowe>img:hover
+{
+	-webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+	-moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+	box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+table
+{
+	widht: 70%;
+}
+table,th,tr,td
+{
+	border-spacing: 0px;
+	border: 0.5px solid black;
+}
+th,td
+{
+	width: 49%;
+	margin: 0;
+}
+tr:first-child
+{
+	text-align: center;
+	background-color: #ffb700;
+}
+tr:not(:first-child)
+{
+	background-color: #888;
+}
+.zdjecia
+{
+	width: 40%;
+}
+.zdjecia,table
+{
+	display: inline-block;
+}
+.zdjecia>img
+{
+	margin-top: 10px;
+	height: 200px;
+	border: 1px solid black;
+}
